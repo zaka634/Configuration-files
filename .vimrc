@@ -19,4 +19,4 @@ inoremap <Right> <nop>
 vnoremap <Up> <nop>
 vnoremap <Down> <nop>
 vnoremap <Left> <nop>
-vnoremap <Right> <nop
+vnoremap <Right> <nop>
