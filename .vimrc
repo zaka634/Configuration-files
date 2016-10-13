@@ -1,11 +1,12 @@
 set clipboard=unnamed
-set rnu 
+set rnu
+" setting for search option
 set incsearch
+set ignorecase
 set hlsearch
 " keymapping
 map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
 map <F3> :source ~/vim_session <cr>     " And load session with F3
-map <Up> <nop>
 map <Down> <nop>
 map <Left> <nop>
 map <Right> <nop>
