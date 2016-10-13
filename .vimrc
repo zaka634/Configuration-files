@@ -1,3 +1,5 @@
+execute pathogen#infect()
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 set clipboard=unnamed
 set rnu
 " setting for search option
@@ -17,3 +19,6 @@ vnoremap <Up> <nop>
 vnoremap <Down> <nop>
 vnoremap <Left> <nop>
 vnoremap <Right> <nop>
+
+"leader key mapping
+map <leader>h :set hlsearch!<cr>
