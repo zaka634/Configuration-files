@@ -1,4 +1,5 @@
 execute pathogen#infect()
+let mapleader=","
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set clipboard=unnamed
 set rnu
@@ -22,3 +23,4 @@ vnoremap <Right> <nop>
 
 "leader key mapping
 map <leader>h :set hlsearch!<cr>
+map <leader>s :%s/
