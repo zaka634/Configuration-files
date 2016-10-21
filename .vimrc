@@ -1,8 +1,8 @@
 execute pathogen#infect()
 let mapleader=","
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 set clipboard=unnamed
 set rnu
+set nowrap
 " setting for search option
 set incsearch
 set hlsearch
