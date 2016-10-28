@@ -20,6 +20,8 @@ vnoremap <Up> <nop>
 vnoremap <Down> <nop>
 vnoremap <Left> <nop>
 vnoremap <Right> <nop>
+map <C-n> :NERDTreeToggle<CR>
+
 
 "leader key mapping
 map <leader>h :set hlsearch!<cr>
