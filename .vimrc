@@ -20,6 +20,8 @@ vnoremap <Up> <nop>
 vnoremap <Down> <nop>
 vnoremap <Left> <nop>
 vnoremap <Right> <nop>
+
+" Plugin Management
 map <C-n> :NERDTreeToggle<CR>
 
 
