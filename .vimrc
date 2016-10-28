@@ -29,3 +29,4 @@ map <C-n> :NERDTreeToggle<CR>
 "leader key mapping
 map <leader>h :set hlsearch!<cr>
 map <leader>s :%s/
+map <leader>r y:%s/<C-r>0/
