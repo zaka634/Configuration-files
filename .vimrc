@@ -3,6 +3,7 @@ let mapleader=","
 set clipboard=unnamed
 set rnu
 set nowrap
+set hidden
 " setting for search option
 set incsearch
 set hlsearch
