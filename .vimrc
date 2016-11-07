@@ -4,6 +4,10 @@ set clipboard=unnamed
 set rnu
 set nowrap
 set hidden
+set backup
+set backupdir=$PATH
+set dir=@PATH
+set undodir=@PATH
 " setting for search option
 set incsearch
 set hlsearch
