@@ -34,3 +34,7 @@ map <C-n> :NERDTreeToggle<CR>
 map <leader>h :set hlsearch!<cr>
 map <leader>s :%s/
 map <leader>r y:%s/\<<C-r>0\>/
+map <leader>c /\c
+map <leader>b :ls<CR>
+map <leader>z "_
+map <leader>sw /\<\><Left><Left>
