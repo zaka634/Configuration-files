@@ -11,6 +11,8 @@ set undodir=@PATH
 " setting for search option
 set incsearch
 set hlsearch
+set laststatus=2
+set pastetoggle=<F10>
 " keymapping
 map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
 map <F3> :source ~/vim_session <cr>     " And load session with F3
@@ -25,6 +27,7 @@ vnoremap <Up> <nop>
 vnoremap <Down> <nop>
 vnoremap <Left> <nop>
 vnoremap <Right> <nop>
+map D "_dd
 
 " Plugin Management
 map <C-n> :NERDTreeToggle<CR>
