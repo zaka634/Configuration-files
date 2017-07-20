@@ -2,6 +2,7 @@ execute pathogen#infect()
 let mapleader=","
 set clipboard=unnamed
 set rnu
+set nu
 set nowrap
 set hidden
 set backup
