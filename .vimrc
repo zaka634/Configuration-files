@@ -11,26 +11,7 @@ if has("gui_running")
   endif
 endif
 
-
-
-
 let g:airline_theme='one'
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-let mapleader=","
-set clipboard=unnamed
-set rnu
-set nowrap
-set hidden
-set incsearch
-set hlsearch
-set backup
-set backupdir=D:/vimTempFiles
-set dir=D:/vimTempFiles
-set undodir=D:/vimTempFiles
-set laststatus=2
-
 "Credit joshdick
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
@@ -51,6 +32,25 @@ endif
 colorscheme one
 set background=dark " for the dark version
 " set background=light " for the light version
+
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+let mapleader=","
+set clipboard=unnamed
+set rnu
+set nowrap
+set hidden
+set incsearch
+set hlsearch
+set backup
+set backupdir=D:/vimTempFiles
+set dir=D:/vimTempFiles
+set undodir=D:/vimTempFiles
+set laststatus=2
+
+
 set pastetoggle=<F10>
 " keymapping
 map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
