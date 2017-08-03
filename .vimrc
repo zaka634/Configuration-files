@@ -89,7 +89,7 @@ let g:syntastic_check_on_wq = 0
 
 "leader key mapping
 map <leader>h :set hlsearch!<cr>
-map <leader>s :%s/
+map <leader>w :%s/
 map <leader>r y:%s/<C-r>0/
 map <leader>c /\c
 map <leader>b "_
