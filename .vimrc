@@ -91,7 +91,4 @@ let g:syntastic_check_on_wq = 0
 map <leader>h :set hlsearch!<cr>
 map <leader>w :%s/
 map <leader>r y:%s/<C-r>0/
-map <leader>c /\c
-map <leader>b "_
 map <leader>z "_
-map <leader>sw /\<\><Left><Left>
