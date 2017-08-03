@@ -49,6 +49,8 @@ set hidden
 set incsearch
 set hlsearch
 set backup
+set ignorecase
+set smartcase
 set backupdir=D:/vimTempFiles
 set dir=D:/vimTempFiles
 set undodir=D:/vimTempFiles
