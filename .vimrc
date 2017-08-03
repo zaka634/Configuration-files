@@ -1,3 +1,7 @@
+" set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+" set guioptions-=r  "remove right-hand scroll bar
+" set guioptions-=L  "remove left-hand scroll bar
 " Language and font setting
 let $LANG = 'en'
 set langmenu=none
@@ -29,16 +33,16 @@ if (empty($TMUX))
   endif
 endif
 
-colorscheme one
-set background=dark " for the dark version
-" set background=light " for the light version
-
 
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+colorscheme one
+set background=dark " for the dark version
+" set background=light " for the light version
 let mapleader=","
 set clipboard=unnamed
+set nu
 set rnu
 set nowrap
 set hidden
@@ -49,7 +53,6 @@ set backupdir=D:/vimTempFiles
 set dir=D:/vimTempFiles
 set undodir=D:/vimTempFiles
 set laststatus=2
-
 
 set pastetoggle=<F10>
 " keymapping
@@ -90,4 +93,3 @@ map <leader>c /\c
 map <leader>b "_
 map <leader>z "_
 map <leader>sw /\<\><Left><Left>
-
