@@ -1,7 +1,3 @@
-" set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-" set guioptions-=r  "remove right-hand scroll bar
-" set guioptions-=L  "remove left-hand scroll bar
 " Language and font setting
 let $LANG = 'en'
 set langmenu=none
@@ -11,6 +7,10 @@ if has("gui_running")
   elseif has("gui_macvim")
     set guifont=Menlo\ Regular:h14
   elseif has("gui_win32")
+    " set guioptions-=m  "remove menu bar
+    set guioptions-=T  "remove toolbar
+    set guioptions-=r  "remove right-hand scroll bar
+    set guioptions-=L  "remove left-hand scroll bar
     source $VIMRUNTIME/vimrc_example.vim
     source $VIMRUNTIME/mswin.vim
     behave mswin
@@ -51,9 +51,9 @@ set nowrap
 set hidden
 set incsearch
 set hlsearch
-set backup
 set ignorecase
 set smartcase
+set backup
 set backupdir=D:/vimTempFiles
 set dir=D:/vimTempFiles
 set undodir=D:/vimTempFiles
@@ -95,3 +95,4 @@ map <leader>h :set hlsearch!<cr>
 map <leader>w :%s/
 map <leader>r y:%s/<C-r>0/
 map <leader>z "_
+
