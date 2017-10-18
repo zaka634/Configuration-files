@@ -198,3 +198,13 @@
 ;; ;;If you use evil
 (define-key evil-normal-state-map (kbd "f") 'ace-jump-char-mode)
 (define-key evil-normal-state-map (kbd "F") 'ace-jump-mode)
+
+(global-set-key (kbd "M-S-<mouse-1>") 'mc/add-cursor-on-click)
+ 
+ 
+(defun bjm/kill-this-buffer ()
+  "Kill the current buffer."
+  (interactive)
+  (kill-buffer (current-buffer)))
+ 
+(global-set-key (kbd "C-x k") 'bjm/kill-this-buffer)
