@@ -208,3 +208,9 @@
   (kill-buffer (current-buffer)))
  
 (global-set-key (kbd "C-x k") 'bjm/kill-this-buffer)
+(load-theme 'zenburn t)
+
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
