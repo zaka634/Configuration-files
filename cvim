@@ -1,0 +1,5 @@
+map F createActiveTabbedHint
+map B :bookmarks
+map b :buffer
+let blacklists = ["http://vim-adventures.com/*","https://nescat.gcubed.co/*","https://bellard.org/*"]
+ 
