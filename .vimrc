@@ -68,7 +68,7 @@ map <F7> mzgg=G`z
 map D "_dd
 " Plugin Management
 map <C-n> :NERDTreeToggle<CR>
-
+imap kj <Esc>
 " For Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
