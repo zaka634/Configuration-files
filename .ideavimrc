@@ -24,6 +24,8 @@ map `n :action GotoBookmark1<CR>
 
 
 let mapleader=","
+map <leader>w :%s/
+map <leader>r y:%s/<C-r>0/
 map <leader>b "_
 map <C-D> <PageDown>
 map <C-U> <PageUp>
