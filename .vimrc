@@ -4,8 +4,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
 filetype plugin indent on
+let mapleader=","
+set clipboard=unnamedplus
+
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -13,9 +15,6 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-
-let mapleader=","
-set clipboard=unnamedplus
 set nu
 set rnu
 set nowrap
@@ -32,6 +31,10 @@ set laststatus=2
 set mouse=a
 set encoding=utf-8
 
+set t_Co=256
+colors zenburn
+
+
 set pastetoggle=<F10>
 " keymapping
 map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
@@ -44,18 +47,20 @@ map <F7> mzgg=G`z
 "Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let python_highlight_all=1
 syntax on
 
 " Plugin Management
-map <C-n> :NERDTreeToggle<CR>
+" map <C-n> :NERDTreeToggle<CR>
 
 " you complete me
 let g:ycm_autoclose_preview_window_after_completion=1
@@ -77,3 +82,9 @@ map <leader>4 "4p
 map <leader>5 "5p
 map <leader>6 "6p
 map <leader>7 "7p
+
+"fzf
+nmap <Leader>F :GFiles<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>H :History<CR>
