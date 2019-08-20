@@ -17,7 +17,8 @@ set expandtab
 
 set nu
 set rnu
-set nowrap
+" set nowrap
+:set textwidth=80
 set hidden
 set incsearch
 set hlsearch
