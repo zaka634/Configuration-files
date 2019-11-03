@@ -48,10 +48,10 @@ map <F7> mzgg=G`z
 "Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'Valloric/YouCompleteMe'
+Plug 'jnurmine/Zenburn'
+Plug 'tpope/vim-commentary'
 Plug 'vim-syntastic/syntastic'
 Plug 'nvie/vim-flake8'
-"Plug 'kien/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
