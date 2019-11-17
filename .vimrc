@@ -69,6 +69,9 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 inoremap kj <Esc>
 
+" Search selected text block
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
 " For Syntastic
 
 "leader key mapping
@@ -76,6 +79,7 @@ map <leader>h :set hlsearch!<cr>
 map <leader>w :%s/
 map <leader>r y:%s/<C-r>0/
 map <leader>z "_
+map <leader>v v$
 map <leader>1 "1p
 map <leader>2 "2p
 map <leader>3 "3p
