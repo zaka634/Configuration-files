@@ -9,7 +9,7 @@ set clipboard=unnamed
 set ignorecase
 set smartcase
 
-map f :action emacsIDEAs.AceJump<CR>
+map f :action KJumpAction<CR>
 " Press `F` to activate Target Mode
 map F :action AceTargetAction<CR>
 " Press `g` to activate Line Mode
