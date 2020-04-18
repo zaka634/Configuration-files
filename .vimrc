@@ -93,3 +93,4 @@ nmap <Leader>F :GFiles<CR>
 nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>H :History<CR>
+nmap <leader>v v$
