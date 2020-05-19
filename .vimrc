@@ -4,21 +4,21 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-filetype plugin indent on
-let mapleader=","
-set clipboard=unnamedplus
 
+filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+" set textwidth=80
 
+let mapleader=","
+set clipboard=unnamedplus
 set nu
 set rnu
 " set nowrap
-:set textwidth=80
 set hidden
 set incsearch
 set hlsearch
@@ -32,10 +32,6 @@ set laststatus=2
 set mouse=a
 set encoding=utf-8
 
-set t_Co=256
-colors zenburn
-
-
 set pastetoggle=<F10>
 " keymapping
 map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
@@ -48,38 +44,51 @@ map <F7> mzgg=G`z
 "Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'jnurmine/Zenburn'
-Plug 'tpope/vim-commentary'
-Plug 'vim-syntastic/syntastic'
-Plug 'nvie/vim-flake8'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'Valloric/YouCompleteMe'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'nvie/vim-flake8'
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+"Plug 'jiangmiao/auto-pairs'
+Plug 'easymotion/vim-easymotion'
+" Plug 'davidhalter/jedi-vim'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 let python_highlight_all=1
 syntax on
 
+
 " Plugin Management
-" map <C-n> :NERDTreeToggle<CR>
 
 " you complete me
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_autoclose_preview_window_after_completion=1
+"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+
+
+set rtp+=/usr/local/opt/fzf
+
+" keymapping
 inoremap kj <Esc>
 
-" Search selected text block
+map <C-n> :NERDTreeToggle<CR>
+
+nnoremap <C-y> :%y<cr>
+" search for current selected block
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
-" For Syntastic
+nnoremap H gT
+nnoremap L gt
 
 "leader key mapping
 map <leader>h :set hlsearch!<cr>
 map <leader>w :%s/
 map <leader>r y:%s/<C-r>0/
 map <leader>z "_
-map <leader>v v$
+map <leader>v v$h
+map <leader>0 "0p
 map <leader>1 "1p
 map <leader>2 "2p
 map <leader>3 "3p
@@ -87,9 +96,12 @@ map <leader>4 "4p
 map <leader>5 "5p
 map <leader>6 "6p
 map <leader>7 "7p
-
 "fzf
 nmap <Leader>F :GFiles<CR>
 nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>H :History<CR>
+
+" map <Leader> <Plug>(easymotion-prefix)
+" map <Leader>f <Plug>(easymotion-bd-f)
+
