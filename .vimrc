@@ -62,6 +62,7 @@ call plug#end()
 
 let python_highlight_all=1
 syntax on
+colorscheme gruvbox
 
 
 " Plugin Management
