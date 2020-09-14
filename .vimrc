@@ -4,6 +4,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+set termguicolors
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -54,7 +55,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 " Plug 'davidhalter/jedi-vim'
 Plug 'tpope/vim-commentary'
+" Plug 'jnurmine/Zenburn'
+Plug 'morhetz/gruvbox'
 call plug#end()
+
 
 let python_highlight_all=1
 syntax on
