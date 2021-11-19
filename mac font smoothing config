@@ -1,2 +1,9 @@
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+
+
+pycharm : 
+
+You can bring Subpixel back by adding to "Help | Edit Custom VM options":
+-Denable.macos.ide.subpixelAA=true
+
