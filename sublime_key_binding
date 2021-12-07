@@ -1,0 +1,15 @@
+[
+    /* sublime 4 to enter normal mode for neovintegeous. command changed from _enter_normal_mode to nv_enter_normal_mode, 
+    because sublime 4 ignore the starting underscore, more details here : https://blog.gerardroche.com/2020/10/25/neovintageous-1.22.0/
+    can also find all the current command here : 
+    https://github.com/NeoVintageous/NeoVintageous/blob/master/nv/commands.py#L240
+    */
+    {
+        "keys": ["k", "j"],
+        "command": "nv_enter_normal_mode",
+        "args": {
+            "mode": "mode_insert"
+        },
+        "context": [{"key": "vi_insert_mode_aware"}]
+    }
+]
