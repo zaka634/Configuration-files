@@ -1,0 +1,22 @@
+/*
+Creating
+Open Script Editor
+Paste the code
+
+Export the script as an Application File Format
+Save it somewhere that Spotlight indexes
+Using
+Copy a single column list of items from a spreadsheet, file or other application
+Invoke Spotlight with COMMAND+SPACE
+Call the application saved
+Paste the SQL'ized values into your query
+*/
+
+Adds Quotes for Character Values
+
+do shell script "pbpaste | python -c \"import sys; import re; print '%s' % ','.join(repr(i) for i in re.split(r'[\\n|\\r\\n|\\r]', sys.stdin.read()) if len(i) > 0)\" | pbcopy"
+
+Does Not Add Quotes for Numeric Values
+
+do shell script "pbpaste | python -c \"import sys; import re; print '(%s)' % ','.join(i for i in re.split(r'[\\n|\\r\\n|\\r]', sys.stdin.read()) if len(i) > 0)\" | pbcopy"
+
