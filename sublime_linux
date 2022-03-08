@@ -1,0 +1,16 @@
+[
+	{
+	    "keys": ["k", "j"],
+	    "command": "nv_enter_normal_mode",
+	    "args": {"mode": "mode_insert"},
+	    "context": [{"key": "vi_insert_mode_aware"}]
+	},
+
+	// { "keys": ["ctrl+alt+s"], "command": "toggle_neovintageous"},
+    { "keys": ["ctrl+alt+t"], "command": "toggle_neovintageous" },
+	{ "keys": ["ctrl+left"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+	{ "keys": ["ctrl+right"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+	{ "keys": ["ctrl+shift+left"], "command": "move_to", "args": {"to": "bol", "extend": true} },
+	{ "keys": ["ctrl+shift+right"], "command": "move_to", "args": {"to": "eol", "extend": true} },
+]
+
