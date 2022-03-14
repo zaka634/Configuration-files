@@ -16,7 +16,11 @@ Adds Quotes for Character Values
 
 do shell script "pbpaste | python -c \"import sys; import re; print '%s' % ','.join(repr(i) for i in re.split(r'[\\n|\\r\\n|\\r]', sys.stdin.read()) if len(i) > 0)\" | pbcopy"
 
+Do not add quotes
+do shell script "pbpaste | python -c \"import sys; import re; print '%s' % ','.join(i for i in re.split(r'[\\n|\\r\\n|\\r]', sys.stdin.read()) if len(i) > 0)\" | pbcopy"
+
 Does Not Add Quotes for Numeric Values
 
 do shell script "pbpaste | python -c \"import sys; import re; print '(%s)' % ','.join(i for i in re.split(r'[\\n|\\r\\n|\\r]', sys.stdin.read()) if len(i) > 0)\" | pbcopy"
+
 
