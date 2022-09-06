@@ -23,3 +23,11 @@ bindkey -M viins 'kj' vi-cmd-mode
 cp -r ~/.config/fcitx.bkp ~/.config/fcitx
 dconf load / < ~/dconf_setting.ini
 
+# git alias
+alias gitreset1='git reset --soft HEAD~1'
+alias gm='git checkout master'
+alias gcm='git commit -m '
+alias ga='git add .'
+alias gb='function _gb(){ git checkout -b "$1" origin/master};_gb'
+alias gc='git checkout '
+
