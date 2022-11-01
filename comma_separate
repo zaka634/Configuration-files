@@ -24,3 +24,7 @@ do shell script "pbpaste | python3 -c \"import sys; import re; print(','.join(i 
 do shell script "pbpaste | python3 -c \"import sys; import re; print('(%s)' % ','.join(i for i in re.split(r'[\\n|\\r\\n|\\r]', sys.stdin.read()) if len(i) > 0))\" | pbcopy"
 
 
+
+
+// slight complicated version
+do shell script "pbpaste | python3 -c 'import sys;j=\",\".join;p=\"({})\".format;print(p(j(repr(i) for i in filter(None, sys.stdin.read().splitlines()))))' | pbcopy"
