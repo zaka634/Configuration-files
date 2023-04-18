@@ -57,6 +57,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
 " Plug 'jnurmine/Zenburn'
 Plug 'morhetz/gruvbox'
+Plug 'rodnaph/vim-color-schemes'
 call plug#end()
 
 
