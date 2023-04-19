@@ -1,0 +1,33 @@
+// type custom theme via control panel
+// Documentation at https://www.sublimetext.com/docs/themes.html
+{
+	"variables":
+	{
+		"font_face": "system",
+        "font_size": 14,
+	},
+	"rules":
+	[
+		{
+	        "class": "sidebar_heading",
+	        "font.size": 16,
+	    },
+	    {
+	        "class": "sidebar_label",
+	        "font.size": 16
+	    },
+	    // Label Controls
+        {
+            "class": "label_control",
+            "font.size": 14,
+        },
+        {
+            "class": "quick_panel_label",
+            "font.size": 16,
+        },
+	    {
+            "class": "tab_label",
+            "font.size": 14,
+        },
+	]
+}
