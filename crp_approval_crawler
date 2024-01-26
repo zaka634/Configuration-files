@@ -1,4 +1,7 @@
 from bs4 import BeautifulSoup
+import time
+import requests
+
 def is_crp(case_number):
     res = requests.get(f"https://www.casestatusext.com/cases/{case_number}")
     soup = BeautifulSoup(res.content, "html.parser")
