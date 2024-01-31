@@ -40,27 +40,36 @@ def get_case_numbers(inquiry_date):
     return []
 
 
-def check_crp_status(case_numbers):
+def check_crp_status(case_numbers, processed_file_name, processed_cases=None):
+    if processed_cases is None:
+        processed_cases = set()
+
     start_time = time.time()
     print(f"start time: {start_time}")
     crp_list = []
     error_list = []
-    for cc_number in case_numbers:
-        time.sleep(1)
-        print(f"current processing :{cc_number}")
-        try:
-            if is_crp(cc_number):
-                print(f"crp : {cc_number}")
-                crp_list.append([cc_number, yesterday])
-        except Exception as e:
-            print(str(e))
-            print(f"skip case_number : {cc_number}")
-            error_list.append(cc_number)
-            continue
+
+    with open(processed_file_name, 'a') as processed_file:
+        for cc_number in case_numbers:
+            if cc_number in processed_cases:
+                continue
+
+            time.sleep(1)
+            processed_file.write(f'{cc_number}\n')
+            print(f"current processing :{cc_number}")
+            try:
+                if is_crp(cc_number):
+                    print(f"crp : {cc_number}")
+                    crp_list.append([cc_number, yesterday])
+            except Exception as e:
+                print(str(e))
+                print(f"skip case_number : {cc_number}")
+                error_list.append(cc_number)
+                continue
 
     crp_list.sort()
 
-    with open('crp.csv', 'w', newline='') as file:
+    with open('crp.csv', 'a', newline='') as file:
         # Step 4: Using csv.writer to write the list to the CSV file
         writer = csv.writer(file)
         writer.writerows(crp_list)  # Use writerow for single list
@@ -74,7 +83,16 @@ hard_code_case_numbers = [
 ]
 
 if hard_code_case_numbers:
-    check_crp_status(hard_code_case_numbers)
+    file_name = 'temp.txt'
+    check_crp_status(hard_code_case_numbers, file_name, [])
 else:
     yesterday = (datetime.date.today() - datetime.timedelta(days=1)).strftime('%Y-%m-%d')
-    check_crp_status(get_case_numbers(yesterday))
+    # yesterday = '2024-01-23'
+    processed_case = set()
+    try:
+        with open(yesterday, 'r') as f:
+            processed_case = set([ln for ln in f.read().splitlines()])
+    except FileNotFoundError:
+        print(f'{yesterday} file does not exist')
+
+    check_crp_status(get_case_numbers(yesterday), yesterday, processed_case)
