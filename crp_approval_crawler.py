@@ -74,6 +74,7 @@ def check_crp_status(case_numbers, processed_file_name, processed_cases=None):
         writer = csv.writer(file)
         writer.writerows(crp_list)  # Use writerow for single list
 
+    print(f"{len(crp_list)} case approved: {crp_list}")
     print(f"{len(error_list)} case skipped: {error_list}")
     print(f"end time: {time.time() - start_time}")
 
