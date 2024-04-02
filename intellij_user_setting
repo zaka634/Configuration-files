@@ -1,0 +1,20 @@
+[Color]:
+language defaults local variable -> DFAF8F
+tag -> 6CA0A3
+static method FFC66D
+text -> 5F7F5F
+function call -> DFAf8F
+metadata -> 6CA0A3
+class name -> 6CA0A3
+instance field -> DFAF8F
+python -> keyboard argument -> 259950
+keyword -> F0DFAF
+nice blue color -> 7CB8BB
+
+
+[theme]:
+Zenburn.
+
+Appearance& Behavior -> Apperance->Use Custom Font : Arial Rounded MT Bold, size 16
+
+Editor->Font : Fira Code, size 18.0, line height 1.2; Typography setting : main weight : Medium, bold weith : SemiBold, No fallback Font. 
