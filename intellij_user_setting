@@ -18,3 +18,13 @@ Zenburn.
 Appearance& Behavior -> Apperance->Use Custom Font : Arial Rounded MT Bold, size 16
 
 Editor->Font : Fira Code, size 18.0, line height 1.2; Typography setting : main weight : Medium, bold weith : SemiBold, No fallback Font. 
+
+
+[jetbrain close remote backend option ]
+All jetbrain client side config is in below folder:
+/Users/$USER/Library/Application Support/JetBrains/JetBrainsClient233.15026.17/options
+
+
+find the correct version of the Jetbrains Client, go to options folder, all your settings should be there.
+
+For the close backend options, go to other.xml, find UNATTHSTCLNT_ON_CLOSEDefaultGatewayExitMsg, 1 means no dialog and 0 means means diagog.
