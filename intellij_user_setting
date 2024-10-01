@@ -17,6 +17,8 @@ https://github.com/smashedtoatoms/zenburn/blob/main/src/main/resources/zenburn.t
 for goland test background color : 
 go to setting -> apperance & behavior-> file color, change tests color to #3A3A3A
 
+setting -> editor -> color schema -> general -> tabs -> selected tabs, set BG color to #4D5760
+
 [theme]:
 Zenburn.
 
