@@ -1,0 +1,103 @@
+{
+    "workbench.colorTheme": "zenburn",
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Fira",
+    "terminal.integrated.fontSize": 14,
+    "window.zoomLevel": 1.2,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["k", "j"],
+        "after": ["<Esc>"]
+      }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+      },
+      {
+        "before": ["<C-n>"],
+        "commands": [":nohl"]
+      },
+      {
+        "before": ["K"],
+        "commands": ["lineBreakInsert"],
+        "silent": true
+      }
+    ],
+    "vim.leader": "<comma>",
+    "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false
+    },
+  
+    "extensions.experimental.affinity": {
+      "vscodevim.vim": 1
+    },
+    "files.autoSave": "afterDelay",
+
+    "python.analysis.extraPaths": [
+      "~/data/protobuf/gen-py",
+      "~/data/protobuf/typeshed",
+      "~/data/protobuf/gen-javascript",
+      "~/data/thrift/src",
+      "~/data/thrift/gen"
+    ],
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "/bin/zsh"
+        }
+    },
+    "files.associations": {
+      "*.aurora":"python"
+    },
+    "go-template.patterns": [
+      "**/*.tpl"
+    ],
+    "typescript.validate.enable": true,
+    "eslint.validate": ["typescript", "typescriptreact"],
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "flow.pathToFlow": "${workspaceFolder}/node_modules/.bin/flow",
+    "javascript.validate.enable": false,
+    "flow.useBundledFlow": false,
+    "stylelint.validate": ["css", "scss"],
+    "black-formatter.args": ["--config", ".arc/linters/black/black.toml"],
+    "workbench.colorCustomizations": {
+      "list.inactiveSelectionBackground": "#595757",
+      "list.activeSelectionBackground": "#595757"
+    },
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "scope": [
+            "source.python",
+          ],
+          "settings": {
+            "foreground": "#dededee8",
+          }
+        }
+      ]
+    },
+    "vim.commandLineModeKeyBindings": [
+      
+    ],
+}
+
+
