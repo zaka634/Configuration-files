@@ -21,11 +21,16 @@ map `m :action GotoBookmark0<CR>
 map `n :action GotoBookmark1<CR>
 
 let mapleader=","
-set easymotion
-  
-Plug 'easymotion/vim-easymotion'
-map <leader>f <Plug>(easymotion-w)
-nnoremap , <C-;>
+" Press `f` to activate AceJump
+" map f <Action>(AceAction)
+" Press `F` to activate Target Mode
+" map F <Action>(AceTargetAction)
+" Press `g` to activate Line Mode
+" map g <Action>(AceLineAction)
+
+nmap f :action KJumpAction<cr>
+nmap F :action KJumpAction.Word0<cr>
+nmap g :action KJumpAction.Line<cr>
  
 map <leader>b "_
 map <C-D> <PageDown>
