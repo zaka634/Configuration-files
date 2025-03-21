@@ -32,60 +32,11 @@ map <C-D> <PageDown>
 map <C-U> <PageUp>
 nnoremap H gT
 nnoremap L gt
- 
-set showmode
- 
- 
-set incsearch
-set hlsearch
-set nu
-set rnu
-set clipboard+=unnamed
-set clipboard+=unnamedplus
-set ignorecase
-set smartcase
- 
- 
-set timeoutlen=200
-imap kj <Esc>
-map ' `
-map mm :action ToggleBookmark0<CR>
-map mn :action ToggleBookmark1<CR>
-
-let mapleader=","
-set easymotion
-
-Plug 'easymotion/vim-easymotion'
-map <leader>f <Plug>(easymotion-w)
-nnoremap , <C-;>
-
-map <leader>b "_
-map <C-D> <PageDown>
-map <C-U> <PageUp>
-nnoremap H gT
-nnoremap L gt
-
-
 
 map <leader>r y:%s/<C-r>0/
 map <leader>v v$h
   
 map <leader>f :action KJumpAction<cr>
-map <leader>1 "1p
-map <leader>2 "2p
-map <leader>3 "3p
-map <leader>4 "4p
-map <leader>5 "5p
-map <leader>6 "6p
-map <leader>7 "7p
-map <leader>w "1p
-set ideajoin
-
-
-map <leader>r y:%s/<C-r>0/
-map <leader>v v$h
-
-" map <leader>f :action KJumpAction<cr>
 map <leader>1 "1p
 map <leader>2 "2p
 map <leader>3 "3p
