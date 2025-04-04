@@ -15,10 +15,10 @@ set smartcase
 set timeoutlen=200
 imap kj <Esc>
 map ' `
-map mm :action ToggleBookmark0<CR>
-map mn :action ToggleBookmark1<CR>
-map `m :action GotoBookmark0<CR>
-map `n :action GotoBookmark1<CR>
+map ma :action ToggleBookmarkA<CR>
+map mb :action ToggleBookmarkB<CR>
+map `a :action GotoBookmarkA<CR>
+map `b :action GotoBookmarkB<CR>
 
 let mapleader=","
 " Press `f` to activate AceJump
