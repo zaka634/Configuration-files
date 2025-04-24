@@ -1,1 +1,0 @@
-A copy from https://github.com/redguardtoo/emacs.d and with some of my own setting.
