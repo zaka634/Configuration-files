@@ -17,20 +17,26 @@ imap kj <Esc>
 map ' `
 map ma :action ToggleBookmarkA<CR>
 map mb :action ToggleBookmarkB<CR>
+map mc :action ToggleBookmarkC<CR>
+map md :action ToggleBookmarkD<CR>
+map mf :action ToggleBookmarkF<CR>
+map ms :action ToggleBookmarkS<CR>
 map `a :action GotoBookmarkA<CR>
 map `b :action GotoBookmarkB<CR>
+map `c :action GotoBookmarkC<CR>
+map `d :action GotoBookmarkD<CR>
+map `f :action GotoBookmarkF<CR>
+map `s :action GotoBookmarkS<CR>
 
 let mapleader=","
-" Press `f` to activate AceJump
-" map f <Action>(AceAction)
-" Press `F` to activate Target Mode
-" map F <Action>(AceTargetAction)
-" Press `g` to activate Line Mode
-" map g <Action>(AceLineAction)
 
 nmap f :action KJumpAction<cr>
 nmap F :action KJumpAction.Word0<cr>
-nmap g :action KJumpAction.Line<cr>
+vnoremap f :action KJumpAction<cr>
+vnoremap F :action KJumpAction.Word0<cr>
+" nmap g :action KJumpAction.Line<cr>
+
+nnoremap , <C-;>
  
 map <leader>b "_
 map <C-D> <PageDown>
@@ -40,8 +46,8 @@ nnoremap L gt
 
 map <leader>r y:%s/<C-r>0/
 map <leader>v v$h
+map <leader>p "_dP
   
-map <leader>f :action KJumpAction<cr>
 map <leader>1 "1p
 map <leader>2 "2p
 map <leader>3 "3p
