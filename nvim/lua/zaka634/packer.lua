@@ -34,8 +34,15 @@ return require('packer').startup(function(use)
         end
     }
 
-
     use 'easymotion/vim-easymotion'
+
+    -- Install nerdfont to support icon : download them from: https://www.nerdfonts.com, fira code is my choice.
+    use {
+        'nvim-tree/nvim-web-devicons',
+        config = function()
+            require('nvim-web-devicons').setup({ default = true })
+        end
+    }
 
 end)
 
