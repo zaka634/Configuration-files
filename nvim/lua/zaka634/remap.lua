@@ -16,3 +16,5 @@ vim.keymap.set("n", "<leader>v", "v$h", { noremap = true })
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("x", "<leader>p", "\"_dP")
+
+vim.keymap.set('n', "'", "`", { desc = "Jump to mark including column (like ` instead of ')" })
