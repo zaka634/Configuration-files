@@ -1,3 +1,5 @@
+" run this cmd on mac terminal to enable key repeat in jetbrain : defaults write -g ApplePressAndHoldEnabled -bool false
+
 set showmode
 set visualbell
 set noerrorbells
