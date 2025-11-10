@@ -6,6 +6,10 @@ function zle-keymap-select() {
   zle -R
 }
 
+function mkdir() {
+  command mkdir $1 && cd $1
+}
+
 zle -N zle-keymap-select
 
 function vi_mode_prompt_info() {
