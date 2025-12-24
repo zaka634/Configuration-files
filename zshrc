@@ -6,8 +6,8 @@ function zle-keymap-select() {
   zle -R
 }
 
-function mkdir() {
-  command mkdir $1 && cd $1
+function mkcd() {
+  mkdir -p -- "$1" && cd -- "$1"
 }
 
 zle -N zle-keymap-select
